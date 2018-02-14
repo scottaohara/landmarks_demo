@@ -97,7 +97,7 @@
           The <code>main</code> landmark wraps the primary content of a document.
         </p>
         <p>
-          <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/main.html">Read more about <code>main</code></a>
+          <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/main.html">Read more about <code>main</code></a>.
         </p>
 
         <article aria-labelledby="article_heading">
@@ -108,11 +108,25 @@
           <p>
             VoiceOver + Safari on macOS will surface articles that have been given an accessible name in an "articles" router menu. You can give an <code>article</code> an accessible name by setting an <code>aria-label</code> or <code>aria-labelledby="..."</code> attribute.
           </p>
-
           <p>
             <a href="https://www.w3.org/TR/html/sections.html#the-article-element">Read more about <code>articles</code></a>
           </p>
         </article>
+
+        <div role="region" aria-label="Important area">
+          <h2>
+            Region Heading
+          </h2>
+          <p>
+            Using a <code>role="region"</code> creates a generic sort of landmark that can be used to promote an important section of content, that would not be better classified under one of the more specifically named landmarks.
+          </p>
+          <p>
+            The usage of <code>region</code>s should be limited, as adding more "important" areas to a page conversely decreases the importance of other areas of the same page.
+          </p>
+          <p>
+            <a href="https://www.w3.org/TR/wai-aria-1.1/#region">Read more about <code>region</code>s</a>.
+          </p>
+        </div>
       </div>
     </main>
 
@@ -123,7 +137,7 @@
           An <code>aside</code> is treated as a <code>complementary</code> landmark. The content should be able to stand on its own, but would be considered related and useful to the "main" content of the document.
         </p>
         <p>
-          <a href="https://www.w3.org/TR/wai-aria-1.1/#complementary">Read more about <code>complementary</code></a>
+          <a href="https://www.w3.org/TR/wai-aria-1.1/#complementary">Read more about <code>complementary</code></a>.
         </p>
       </div>
     </aside>
@@ -132,17 +146,17 @@
       <div class="content-area">
         <h2 style="font-size: 1.125em">This is the footer</h2>
         <p>
-          VoiceOver on macOS does not recognize a <code>footer</code>,
-          as a direct child of the <code>body</code> element, as a
-          valid landmark.
+          VoiceOver on macOS does not recognize a <code>footer</code>, as a direct child of the <code>body</code> element, as a valid landmark.
         </p>
         <p>
           Fix this by using <code>role="contentinfo"</code>.
         </p>
         <p>
-          <a href="https://www.w3.org/TR/wai-aria-1.1/#contentinfo">Read more about <code>contentinfo</code></a>
+          <a href="https://www.w3.org/TR/wai-aria-1.1/#contentinfo">Read more about <code>contentinfo</code></a>.
         </p>
+
         <hr>
+
         <p>
           Check out the <a href="https://github.com/scottaohara/landmarks_demo">source for this document on GitHub</a>.
         </p>
