@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="en-us" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>
+      Native Landmarks Demonstration
+    </title>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1">
+    <script>
+      // remove no-js and add 'js' to the HTML
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+
+    <style>
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-family:arial}*{margin-bottom:0}body,html{background:#fafafa;color:#450c13;font-size:18px;line-height:1.3;margin:0;padding:0;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.content-area{padding:1.5em;margin:auto;max-width:800px}a{color:#921c2b}a:focus,a:hover{color:#c12f48;outline:solid 2px}p{margin:0 0 1.25em}h1{margin-bottom:.5em}code{font-weight:700;background:#eee}p:last-child{margin:0}details,details div{margin-top:.5em}h1,h2,h3{margin-top:0}h1+p,h1+p:last-child,h2+p,h2+p:last-child,h3+p,h3+p:last-child{margin-top:1.25em}aside,header,main{border-bottom:1px solid}.nav-search{max-width:800px;padding:1.125em;margin:auto}.nav-search li{flex:1 0;text-align:center}.nav-search nav{flex:1 0;margin-bottom:1.25em}.nav-search ul{display:flex;padding:0;list-style:none;margin:0 0 0 -.25em}.nav-search a{display:block;padding:.45em .5em;border:1px solid;margin:0 .25em}@media screen and (min-width:600px){.nav-search{display:flex;align-items:center}.nav-search nav{margin:0}.nav-search>div{flex-grow:0;padding-left:1em}}button,input,select,textarea{border-radius:0;box-sizing:border-box;font-family:inherit;font-size:inherit;font-weight:inherit;line-height:normal;margin:0;overflow:visible;text-transform:none}input::-ms-clear{display:none;height:0;width:0}button::-moz-focus-inner{border-style:none;padding:0}input[type=search]{-webkit-appearance:textfield;font-family:inherit;font-size:inherit}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;appearance:none}[role=search]{border:1px solid #565656;display:block;padding-right:2.5em;position:relative}[role=search] svg{display:block;fill:#fff}[role=search]>input[type=search]{border:0;border-right:1px solid #565656;padding:.5em;width:100%}[role=search]>[type=submit]{background:#a0001e;border:0;bottom:0;position:absolute;right:0;top:0;width:2.5em}[role=search]>[type=submit]:focus,[role=search]>[type=submit]:hover,[role=search]>input[type=search]:focus{box-shadow:inset 0 0 0 1px #a0001e;outline:#a0001e solid 1px;outline-offset:0}[role=search]>input[type=search]:focus{border-right-color:#450c13}[role=search]>[type=submit]:focus,[role=search]>[type=submit]:hover{background:#450c13}[role=search]>[type=submit]:focus svg,[role=search]>[type=submit]:hover svg{fill:#fff}
+
+      /**
+       * For browsers that support focus within,
+       * show off an outline around each of the different
+       * landmarks in the document.
+       */
+      header:focus-within,
+      footer:focus-within,
+      main:focus-within,
+      aside:focus-within,
+      nav:focus-within {
+        box-shadow: inset 0 0 0 4px blue;
+      }
+    </style>
+  </head>
+
+  <body id="body">
+
+    <header>
+      <div class="content-area">
+        <p style="font-size: 1.75em; margin: 0;">
+          Pretend_Imma_logo
+        </p>
+        <details>
+          <summary>Note about this demo</summary>
+          <div>
+            <p>
+              This test file is to demonstrate support for landmark roles being
+              exposed by native HTML elements. There are no <code>role</code> attributes
+              used on any of the elements in this document.
+            </p>
+          </div>
+        </details>
+      </div>
+      <div class="nav-search">
+        <nav aria-label="ARIA specification links">
+          <ul>
+            <li>
+              <a href="https://www.w3.org/TR/wai-aria-1.1/#banner">Banner</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/wai-aria-1.1/#search">Search</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/wai-aria-1.1/#navigation">Navigation</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="site_main" aria-label="content">
+      <div class="content-area">
+
+        <h1>Welcome to the main</h1>
+        <p>
+          The <code>main</code> landmark wraps the primary content of a document.
+        </p>
+        <p>
+          <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/main.html">Read more about <code>main</code></a>.
+        </p>
+
+        <article aria-labelledby="article_heading">
+          <h2 id="article_heading">Article Heading</h2>
+          <p>
+            <code>article</code>s are not landmarks. However, they will be included in the listing of regions, when navigating with <kdb>r</kdb> with the JAWS screen reader. They are also included in the landmarks router when using iOS VoiceOver.
+          </p>
+          <p>
+            VoiceOver + Safari on macOS will surface articles that have been given an accessible name in an "articles" router menu. You can give an <code>article</code> an accessible name by setting an <code>aria-label</code> or <code>aria-labelledby="..."</code> attribute.
+          </p>
+          <p>
+            <a href="https://www.w3.org/TR/html/sections.html#the-article-element">Read more about <code>articles</code></a>
+          </p>
+        </article>
+
+        <form aria-labelledby="dummy" style="margin-top: 2em">
+          <h2 style="font-size: 1.125em; margin-bottom: 1em;" id="dummy">A dummy form</h2>
+          <label for="name">
+            Your Name:
+          </label>
+          <div>
+            <input type="text" id="name" readonly>
+          </div>
+
+          <p style="margin-top: 1.2em;">
+           An example form to showcase it as a landmark. Nothing to submit here...
+          </p>
+
+          <button type="submit" disabled>
+            This button don't work
+          </button>
+        </form>
+
+        <section aria-label="A section" style="margin-top: 2em;">
+          <h2>
+            A section that was given an accessible name
+          </h2>
+          <p>
+            To create a native <code>region</code> landmark, provide a <code>section</code>
+            element with an accessible name.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <aside aria-label="content">
+      <div class="content-area">
+        <h2 style="font-size: 1.25em">Just an aside</h2>
+        <p>
+          An <code>aside</code> is treated as a <code>complementary</code> landmark. The content should be able to stand on its own, but would be considered related and useful to the "main" content of the document.
+        </p>
+        <p>
+          <a href="https://www.w3.org/TR/wai-aria-1.1/#complementary">Read more about <code>complementary</code></a>.
+        </p>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="content-area">
+        <h2 style="font-size: 1.125em">This is the footer</h2>
+        <p>
+          VoiceOver on macOS does not presently recognize a <code>footer</code>, as a direct child of the <code>body</code> element, as a landmark.
+        </p>
+        <p>
+          A <code>role="contentinfo"</code> would be needed to force VoiceOver to recognize this landmark.
+        </p>
+        <p>
+          <a href="https://www.w3.org/TR/wai-aria-1.1/#contentinfo">Read more about <code>contentinfo</code></a>.
+        </p>
+
+        <hr>
+
+        <p>
+          Check out the <a href="https://github.com/scottaohara/landmarks_demo">source for this document on GitHub</a>.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>
