@@ -101,7 +101,7 @@
         <article aria-labelledby="article_heading">
           <h2 id="article_heading">Article Heading</h2>
           <p>
-            <code>article</code>s are not landmarks. However, they will be included in the listing of regions, when navigating with <kdb>r</kdb> with the JAWS screen reader. They are also included in the landmarks router when using iOS VoiceOver.
+            <code>article</code>s are not landmarks. However, they may be surfaced by certain screen readers, especially if given an accessible name.
           </p>
           <p>
             VoiceOver + Safari on macOS will surface articles that have been given an accessible name in an "articles" router menu. You can give an <code>article</code> an accessible name by setting an <code>aria-label</code> or <code>aria-labelledby="..."</code> attribute.
@@ -125,25 +125,25 @@
             <a href="https://www.w3.org/TR/wai-aria-1.1/#region">Read more about <code>region</code>s</a>.
           </p>
         </div>
-        
+
         <form role="form" aria-labelledby="dummy" style="margin-top: 2em">
-          <h2 style="font-size: 1.125em; margin-bottom: 1em;" id="dummy">A dummy form</h2>                      
+          <h2 style="font-size: 1.125em; margin-bottom: 1em;" id="dummy">A dummy form</h2>
           <label for="name">
             Your Name:
           </label>
           <div>
             <input type="text" id="name" readonly>
           </div>
-          
+
           <p style="margin-top: 1.2em;">
            An example form to showcase it as a landmark. Nothing to submit here...
           </p>
-                                        
+
           <button type="submit" disabled>
-            This button don't work                
+            This button don't work
           </button>
         </form>
-        
+
         <section aria-label="A section" style="margin-top: 2em;">
           <h2>
             A section that was given an accessible name

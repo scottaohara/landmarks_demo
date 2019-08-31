@@ -41,16 +41,16 @@
           <summary>Header/Banner information</summary>
           <div>
             <p>
-              A <code>header</code> receives a <code>role="banner"</code> if it is the 
+              A <code>header</code> receives a <code>role="banner"</code> if it is the
               closest <code>header</code> scoped to the <code>body</code> element.
             </p>
             <p>
-              A <code>banner</code> landmark typically contains global information to a 
+              A <code>banner</code> landmark typically contains global information to a
               site/application and can house other landmarks like <code>navigation</code>.
             </p>
             <p>
-              There is no heading element in this <code>header</code>, and that's a-ok.  
-              The <code>h1</code> is far more useful setting the primary topic of a document, 
+              There is no heading element in this <code>header</code>, and that's a-ok.
+              The <code>h1</code> is far more useful setting the primary topic of a document,
               than it is housing brand identification.
             </p>
           </div>
@@ -87,33 +87,33 @@
         <article>
           <h2 id="article_heading">Article Heading</h2>
           <p>
-            <code>article</code>s are not landmarks. However, they may be surfaced by certain screen readers.
+            <code>article</code>s are not landmarks. However, they may be surfaced by certain screen readers, especially if given an accessible name.
           </p>
           <p>
-            For instance, VoiceOver on macOS will surface articles that have been given an accessible 
-            name in an "articles" router menu. You can give an <code>article</code> an accessible name by 
+            For instance, VoiceOver on macOS will surface articles that have been given an accessible
+            name in an "articles" router menu. You can give an <code>article</code> an accessible name by
             setting an <code>aria-label</code> or <code>aria-labelledby="..."</code> attribute.
           </p>
           <p>
             <a href="https://www.w3.org/TR/html/sections.html#the-article-element">Read more about <code>articles</code></a>
           </p>
         </article>
-        
+
         <form style="margin-top: 2em">
-          <h2 style="font-size: 1.125em; margin-bottom: 1em;" id="dummy">A pretend form</h2>                      
+          <h2 style="font-size: 1.125em; margin-bottom: 1em;" id="dummy">A pretend form</h2>
           <label for="name">
             Your Name:
           </label>
           <div>
             <input type="text" id="name" readonly>
           </div>
-          
+
           <p style="margin-top: 1.2em;">
            An example form to test if it's surfaced as a landmark.
           </p>
-                                        
+
           <button type="submit" disabled>
-            This button don't work                
+            This button don't work
           </button>
         </form>
       </div>
@@ -123,8 +123,8 @@
       <div class="content-area">
         <h2 style="font-size: 1.25em">Just an aside</h2>
         <p>
-          An <code>aside</code> is treated as a <code>complementary</code> landmark. 
-          The content should be able to stand on its own, but would be considered related 
+          An <code>aside</code> is treated as a <code>complementary</code> landmark.
+          The content should be able to stand on its own, but would be considered related
           and useful to the "main" content of the document.
         </p>
         <p>
